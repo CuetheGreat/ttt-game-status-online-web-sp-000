@@ -39,9 +39,9 @@ end
 def full?(board)
   empty = board.select { |space| (space == "" || space == " ")  }
   if empty
-    return false
-  else
     return true
+  else
+    return false
   end
 end
 
