@@ -30,12 +30,22 @@ def won?(board)
   end
 end
 
+def draw?(board)
+  
+end
 
 
-
-def win_combination?(board, indexes)
-  if (board[indexes[0]] == "X" && board[indexes[1]] == "X" && board[indexes[2]] == "X") || (board[indexes[0]] == "O" && board[indexes[1]] == "O" && board[indexes[2]] == "O") 
+def full?(board)
+  counter = 0
+  board.each do |space|
+    if (space == "X" || space == "O")
+      counter +=1
+    end
+  end
+  if counter == 9
     return true
+  else 
+    return false
   end
 end
 
@@ -45,6 +55,13 @@ end
 
 
 
+
+
+def win_combination?(board, indexes)
+  if (board[indexes[0]] == "X" && board[indexes[1]] == "X" && board[indexes[2]] == "X") || (board[indexes[0]] == "O" && board[indexes[1]] == "O" && board[indexes[2]] == "O") 
+    return true
+  end
+end
 
 def empty_board?(board)
   counter = 0
@@ -59,6 +76,7 @@ def empty_board?(board)
     return false
   end
 end
+
 
 
 
