@@ -38,7 +38,11 @@ end
 
 def full?(board)
   empty = board.select { |space| (space == "" || space == " ")  }
-  puts empty
+  if empty
+    return false
+  else 
+    return true
+  end
 end
 
 
