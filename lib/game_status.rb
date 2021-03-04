@@ -37,7 +37,7 @@ end
 
 
 def full?(board)
-  empty = board.select { |space| (space == "" || space == " ")  }
+  empty = board.each { |space| (space == "" || space == " ")  }
   if empty
     return true
   else
@@ -55,7 +55,6 @@ end
 
 def win_combination?(board, indexes)
   if (board[indexes[0]] == "X" && board[indexes[1]] == "X" && board[indexes[2]] == "X") || (board[indexes[0]] == "O" && board[indexes[1]] == "O" && board[indexes[2]] == "O") 
-    r
     return true
   end
 end
