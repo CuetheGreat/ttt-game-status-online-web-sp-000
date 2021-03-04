@@ -37,15 +37,12 @@ end
 
 def full?(board)
   if won?(board)
-    
-  
-  
-  counter = 0
-  board.each do |space|
-    if (space == "X" || space == "O")
-      counter +=1
+    counter = 0
+    board.each do |space|
+      if (space == "X" || space == "O")
+        counter +=1
+      end
     end
-  end
   if counter == 9
     return true
   else 
