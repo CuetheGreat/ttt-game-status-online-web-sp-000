@@ -37,12 +37,12 @@ end
 
 
 def full?(board)
-  empty = board.each { |space| (space == "" || space == " ")  }
-  if empty
-    return true
-  else
-    return false
+  board.each do |space|
+    if space == "" || space == " "
+      return false
+    end
   end
+  return true
 end
 
 
