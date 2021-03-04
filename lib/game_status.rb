@@ -40,7 +40,7 @@ def full?(board)
   empty = board.select { |space| (space == "" || space == " ")  }
   if empty
     return false
-  elsif !won?(board)
+  else
     return true
   end
 end
