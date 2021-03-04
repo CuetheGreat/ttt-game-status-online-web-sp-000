@@ -61,6 +61,14 @@ def over?(board)
   end
 end
   
+def winner(board)
+  w_index = won?(board)
+  if w_index
+    return board[w_index[0]]
+  else
+    return nil
+  end
+end
 
 
 
