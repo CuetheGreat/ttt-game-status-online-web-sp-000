@@ -43,6 +43,7 @@ def full?(board)
         counter +=1
       end
     end
+  end
   if counter == 9
     return true
   else 
