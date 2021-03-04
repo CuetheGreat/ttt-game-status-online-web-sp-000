@@ -32,7 +32,7 @@ def won?(board)
 end
 
 def draw?(board)
-  if 
+  
 end
 
 
